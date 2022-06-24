@@ -1,0 +1,596 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #main {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+  font: normal .80em 'trebuchet ms', arial, sans-serif;
+  background-image: url(background.jpg);
+  color: black;
+}
+
+p {
+  padding: 0 0 20px 0;
+  font: normal 120% 'century gothic', arial;
+  line-height: 1.5em;
+}
+
+img {
+  border: 0;
+}
+
+/*SEZIONE BANNER NEWSLETTER*/
+#banner {
+  background: url(green-banner.jpg) transparent;
+  width: 100%;
+  height: 180px;
+  margin-bottom: 20px;
+  box-shadow: 4px 4px 4px #bbbbbb;
+  border: 1px solid #bbbbbb;
+  margin-top: 20px;
+  transition: .5s ease;
+}
+#newsletterlink {
+  background: whitesmoke;
+}
+#newsletterlink h1, #newsletterlink a {
+  font: normal 180% 'Georgia, serif';
+  font-style: italic;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  margin-top: 45px;
+}
+#banner:hover {
+  transition: .5s ease;
+  opacity: 0.65;
+}
+/*FINE SEZIONE*/
+/*SEZIONE BANNER BLOG*/
+#blogbanner {
+  background: url(blog.png) transparent;
+  width: 98%;
+  height: 180px;
+  margin-bottom: 20px;
+  box-shadow: 4px 4px 4px #bbbbbb;
+  border: 1px solid #bbbbbb;
+  margin-top: 20px;
+}
+/*FINE SEZIONE*/
+/*SEZIONE TITOLI VARI*/
+h1, h2, h3 {
+  font: normal 170% 'century gothic', arial;
+  margin: 0 0 15px 0;
+  padding: 15px 0 5px 0;
+}
+
+h2 {
+  font-size: 160%;
+  padding: 9px 0 5px 0;
+}
+
+h3
+{
+  font-size: 140%;
+  padding: 5px 0 0 0;
+}
+/*Sotto Latest News*/
+h4 {
+  padding: 0 0 5px 0;
+  font: normal 110% arial;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/*Sotto h4*/
+h5 {
+  font: normal 95% arial;
+  letter-spacing: normal;
+  padding: 0 0 15px 0;
+}
+
+/*Lista articolo sotto Latest News*/
+.sidebar_item p {
+  font: normal 110% arial;
+  letter-spacing: normal;
+  padding: 0 0 10px 0;
+}
+.sidebar_item a {
+  text-decoration: none;
+}
+/*FINE SEZIONE TITOLI*/
+/*Centrare titolo e navbar*/
+#main, #logo, #menubar, #site_content, #footer {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Parte sotto titolo*/
+header {
+  background: #739f60; /*Verde*/
+  height: 177px;
+}
+
+/*SEZIONE POSIZIONE TITOLO*/
+#logo {
+  width: 800px;
+  /*position: left;*/
+  height: 140px;
+  background: transparent;
+}
+#logo img {
+  width: 600px;
+  height: 180px;
+}
+#logo #logo_text {
+  position: absolute;
+  top: 10px;
+  left: 13%;
+  transition: .5s ease;
+}
+#logo_text:hover {
+  transition: .5s ease;
+  opacity: 0.65;
+}
+/*FINE SEZIONE*/
+/*SEZIONE ABOUT US*/
+.hero {
+  box-shadow: 4px 4px 4px #bbbbbb;
+  border: 1px solid #bbbbbb;
+  text-align: center;
+  background: whitesmoke;
+}
+.element {
+  display: inline-block;
+  width: 40%;
+  margin-left: 5%;
+}
+/*FINE SEZIONE*/
+/*SEZIONE TRE IMMAGINI PAGINA PRINCIPALE*/
+.box{
+  box-shadow: 4px 4px 4px #bbbbbb;
+  border: 1px solid #bbbbbb;
+  text-align: center;
+  background: whitesmoke;
+}
+/*link sotto immagine*/
+.box a {
+  text-decoration: none;
+  color: black;
+}
+
+#box2{
+  margin-top: 7%;
+}
+/*column1 -> Colonna di sinistra, immagini crowdfunding*/
+.column1 {
+  float: left;
+  width: 53%;
+}
+/*Codice per offuscare immagine colonna 1, con transizione fluida*/
+.column1 img {
+  transition: .5s ease;
+  width: 100%;
+  height: 100%;
+}
+.column1 img:hover {
+  opacity: 0.65;
+  transition: .5s ease;
+}
+/*column2 -> Colonna di destra, immagini blog e articolo*/
+.column2 {
+  float: right;
+  width: 44%;
+}
+/*Codice per offuscare immagini colonna 2, con transizione fluida*/
+.column2 img {
+  /*height: 285px;*/
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+}
+.column2 img:hover {
+  opacity: 0.65;
+  transition: .5s ease;
+}
+
+/*Per tenere le immagini sopra il banner*/
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*SEZIONE MENU A SCOMPARSA*/
+nav {
+  width: 250px;
+  background: #F5F5F5;
+  position: fixed;
+  color: rgba(0, 0, 0, 0.87);
+  clip-path: circle(24px at 32px 24px); /*Menu a scomparsa che parte da un pallino*/
+  transition: -webkit-clip-path 0.5625s, clip-path 0.375s; /*Transizione più fluida da pallino a menu*/
+  z-index: 999999;
+}
+
+nav:hover, nav:active {
+  -webkit-clip-path: circle(390px at 225px 24px);
+  clip-path: circle(390px at 150px 24px);
+}
+
+#menubar a {
+  display: block;
+  line-height: 70px;
+  padding: 0 20px;
+  color: inherit;
+  cursor: pointer;
+  font: 17px arial;
+  text-shadow: 1px 2px 2px #e6e6e6;
+  text-decoration: none;
+  margin: 0 0 15px 0;
+}
+
+.menu:hover { background: #CCCCCC; }
+
+.navicon {
+  padding: 23px 20px;
+  cursor: pointer;
+}
+
+.navicon div {
+  position: relative;
+  width: 20px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.87);
+}
+
+/*Simbolo menu pallino*/
+/*before e after sono entità che appaiono a schermo ma non presenti nel file html/php*/
+.navicon div:before,
+.navicon div:after {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.87);
+  position: absolute;
+}
+
+/*Distanza delle righette del simbolo menu*/
+.navicon div:before { top: -7px; }
+.navicon div:after { top: 7px; }
+/*FINE SEZIONE MENU A SCOMPARSA*/
+
+/*SEZIONE SITE_CONTENT*/
+/*Container principale del sito, sotto immagini e banner*/
+#site_content {
+  width: 60%;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  padding: 0 0 10px 0;
+}
+/*FINE SEZIONE SITE_CONTENT*/
+/*SEZIONE SIDEBAR*/
+/*Sidebar del sito, affiancata alla sezione site_content (per link, barra di ricerca, ecc...)*/
+#sidebar_container {
+  float: right;
+  width: 224px;
+}
+
+.sidebar_top {
+  width: 222px;
+  height: 14px;
+  background: transparent;
+}
+
+.sidebar_base {
+  width: 222px;
+  height: 14px;
+}
+
+.sidebar {
+  float: right;
+  width: 222px;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.sidebar_item {
+  padding: 0 15px;
+  width: 192px;
+}
+/*FINE SEZIONE SIDEBAR*/
+/*SEZIONE CONTENT*/
+#content {
+  text-align: left;
+  width: 70%;
+  padding: 0 0 0 5px;
+  float: left;
+}
+/*FINE SEZIONE CONTENT*/
+
+/*SEZIONE FOOTER*/
+footer {
+  position: relative;
+  width: 100%;
+  font-family: 'trebuchet ms', sans-serif;
+  font-size: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  background: #364b37;
+  color: #E8E8CC;
+  padding-top: 10px;
+  margin-top: 7%;
+}
+
+footer p {
+  line-height: 1.2em;
+  padding: 5px 5px 10px 0;
+}
+
+footer a {
+  color: #E8E8CC;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+/*FINE SEZIONE FOOTER*/
+/*SEZIONE SEARCH BAR*/
+#searchbar {
+  width: 400px;
+}
+/*FINE SEZIONE*/
+/*SEZIONE MODIFICA PROFILO*/
+form .forms {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 25px 0;
+}
+
+.forms input {
+  width: 36%;
+  padding: 0 200px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.forms label {
+  position:absolute;
+  top: 50%;
+  left: 5px;
+  color: #3F3455;
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+
+#modify {
+  width: 100%;
+  height: 50px;
+  background: #2C272E;
+  border-radius: 5px;
+  font-size: 18px;
+  color: whitesmoke;
+  padding: 10px;
+}
+
+#modify:hover, #newsletterbutton:hover, #editorsend:hover{
+  background-color: #B9992B;
+  transition: .5s;
+}
+
+form #modify, form #newsletterbutton, form #editorsend{
+  padding-bottom: 20px;
+}
+
+.linkprofilo {
+  font-size: 18px;
+  float: right;
+  margin-top: 50px;
+  margin-right: 5px;
+  width: 200px;
+}
+/*FINE SEZIONE*/
+/*MODIFICHE PULSANTE MAIL*/
+#editorsend {
+  width: 34%;
+  height: 50px;
+  background: #2C272E;
+  border-radius: 5px;
+  font-size: 18px;
+  color: whitesmoke;
+  padding: 10px;
+}
+/*FINE SEZIONE*/
+/*MODIFICHE PULSANTE NEWSLETTER*/
+#newsletterbutton {
+  width: 100%;
+  height: 50px;
+  background: #2C272E;
+  border-radius: 5px;
+  font-size: 18px;
+  color: whitesmoke;
+  padding: 10px;
+}
+/*FINE SEZIONE*/
+/*SEZIONE CROWDFUNDING PROGRESS BAR*/
+#barHolder {
+  background-color: #F6F3EE;
+  width: 100%;
+  height: 22px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+}
+
+#bar {
+  background-color: #367045;
+  height: 22px;
+  transition: width 2s;
+  border-radius: 8px;
+}
+
+#startstatus {
+  float: left;
+  font-size: 15px;
+}
+
+#goal {
+  float: right;
+  font-size: 15px;
+}
+
+#projectinfo {
+  margin-bottom: 30px;
+}
+
+#goalreached {
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+/*FINE SEZIONE*/
+/*SEZIONE PER I RIQUADRI DEI POST SUL BLOG*/
+.blogbox{
+  position: relative;
+  width: 400px;
+  background: #E0E0E0;
+  border-radius: 10px;
+}
+
+.blogbox h1{
+  text-align: center;
+  padding: 20px 0;
+  color: black;
+}
+/*SEZIONE BLOG*/
+#info {
+  background: #E0E0E0;
+  border-radius: 10px;
+  border: 1px solid #bbbbbb;
+  text-align: center;
+}
+#post {
+  background: whitesmoke;
+  padding: 5%;
+  padding-top: 2%;
+  box-shadow: 4px 4px 4px #bbbbbb;
+  border: 1px solid #bbbbbb;
+}
+#post img {
+  width: 100%;
+  height: 100%;
+}
+/*FINE SEZIONE*/
+/*SEZIONE SLIDESHOW PAGINA PRINCIPALE (crowdfunding)*/
+/*Contenitore generale*/
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/*Indice immagine mostrata*/
+.numbertext {
+  font: normal 170% 'century gothic', arial;
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Pallini sotto immagine*/
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+/*Colore pallino a cui siamo*/
+.active {
+  background-color: #717171;
+}
+
+/*Animazioni per il cambio fluido di immagine*/
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*RESPONSIVE DESIGN*/
+@media only screen and (min-width: 1650px) {
+  /*Widescreen*/
+  .column2 img {
+    height: 454px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  /*Smartphone/Ipad/ecc...*/
+  .column2 img {
+    height: 82px;
+  }
+  .column1 img {
+    height: 250px;
+  }
+  #logo img {
+    margin-left: 50px;
+  }
+  .linkprofilo {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /*Smartphone/Ipad/ecc...*/
+  .column2 img {
+    height: 82px;
+  }
+  .column1 img {
+    height: 250px;
+  }
+  #logo img {
+    width: 300px;
+    margin-bottom: -100px;
+    margin-left: 10px;
+  }
+  .linkprofilo {
+    margin-bottom: 10px;
+  }
+}
